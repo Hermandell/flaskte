@@ -5,7 +5,6 @@ import requests
 from jsonschema import Draft7Validator
 from json import load, JSONDecodeError
 
-# abre el archivo schema
 with open('schema.json') as f:
     schema = load(f)
 

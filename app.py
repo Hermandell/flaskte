@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
 app.config['CORS_HEADERS'] = 'Content-Type'
 CORS(app)
-cors = CORS(app, resources={r"/user": {"origins": "http://127.0.0.1:5000"}})
+cors = CORS(app)
 #declarar la clase
 myserver=MyServer()
 
@@ -27,7 +27,7 @@ def token_required(f):
     return decorated
 
 
-@cross_origin(origin='127.0.0.1',headers=['Content- Type','Authorization'])
+@cross_origin(headers=['Content- Type','Authorization'])
 @app.route('/user', methods=["GET"])
 @token_required
 def user():
