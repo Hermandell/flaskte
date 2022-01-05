@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "properties": {
+      "ncontrol": {
+        "type": "string",
+        "minimum": 1,
+        "maxLength": 17
+      },
+      "password": {
+        "type": "string",
+        "minimum": 1,
+        "maximum": 40
+      }
+    },
+    "required": ["ncontrol", "password"],
+    "additionalProperties": false
+}
